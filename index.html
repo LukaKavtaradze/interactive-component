@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Interactive Component</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="circles"></div>
-        <h1>Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. 
-            No credit card required. </p>
+      <div class="circles"></div>
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
     </header>
+    <div class="container">
     <main>
-        <section class="pricing">
-            <h2>100K PageViews</h2>
-            <input type="range" aria-valuemin="1" aria-valuemax="5">
-            <section class="monthly">
-                <p>$16.00 <span>/month</span></p>
-            </section>
-            <section class="billing">
-                <h4>Monthly Biling</h4>
-               <div class="toogle"></div>
-                <h4>Yearly Billing</h4>
-                <div class="rectangle"><p>-25%</p></div>                
-            </section>
-    
+      <div class="pricing">
+        <h2 id="pageViews">100K PageViews</h2>
+        <div class="inputSlider">
+          <input type="range" id="inputRange"  min="1" max="5" step="1"  />
+          <div class="rangeProgress"></div>
+        </div>
+
+        <section class="monthly">
+          <p id="DisplayRange">$16.00
+          </p>
+          <span id="month">/month</span>
         </section>
-      
+      </div>
+        <section class="billing">
+        <div class="monthly-bil">
+            <h4>Monthly Biling</h4>
+        </div>  
+          <div class="toogle"></div>
+       <div class="yearly-bil">
+        <h4>Yearly Billing</h4>
+       </div>   
+          <div class="rectangle">
+            <p>-25%</p>
+            <span id="discount">Discount</span>
+        </div>
+        </section>
+        <div class="line"></div>
+        <div class="trial">
+          <section class="checking">
+            <div class="check">
+                <img src="./assets/icon-check.svg" alt="">
+                <h5>Unlimited Websites</h5>
+            </div>
+            <div class="check">
+                <img src="./assets/icon-check.svg" alt="">
+                <h5>100% data ownership </h5>
+            </div>
+            <div class="check">
+                <img src="./assets/icon-check.svg" alt="">
+                <h5>Unlimited Websites</h5>
+            </div>
+        </section>    
+        <button>Start my trial</button>
+        </div>
     </main>
-    
-</body>
+
+
+ 
+  
+
+    </div>
+  </body>
 </html>
